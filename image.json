@@ -1,0 +1,14 @@
+{
+    "packages": {
+        "grub2": "latest",
+        "linux-image-amd64": "latest",
+        "bash": "latest",
+        "network-manager": "latest",
+        "locales": "latest"
+    },
+    "preseeds": [
+        "pre-seeds/common.conf",
+        "pre-seeds/locales.conf",
+        "pre-seeds/timezone.conf"
+    ]
+}
