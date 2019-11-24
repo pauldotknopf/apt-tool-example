@@ -428,164 +428,8 @@
       "version": "3.53",
       "architecture": "all"
     },
-    "libbluetooth3": {
-      "version": "5.50-1",
-      "architecture": "amd64"
-    },
-    "libkeyutils1": {
-      "version": "1.6-6",
-      "architecture": "amd64"
-    },
-    "libkrb5support0": {
-      "version": "1.17-3",
-      "architecture": "amd64"
-    },
-    "libk5crypto3": {
-      "version": "1.17-3",
-      "architecture": "amd64"
-    },
-    "libkrb5-3": {
-      "version": "1.17-3",
-      "architecture": "amd64"
-    },
-    "libgssapi-krb5-2": {
-      "version": "1.17-3",
-      "architecture": "amd64"
-    },
-    "libsasl2-modules-db": {
-      "version": "2.1.27+dfsg-1",
-      "architecture": "amd64"
-    },
-    "libsasl2-2": {
-      "version": "2.1.27+dfsg-1",
-      "architecture": "amd64"
-    },
-    "libldap-common": {
-      "version": "2.4.47+dfsg-3+deb10u1",
-      "architecture": "all"
-    },
-    "libldap-2.4-2": {
-      "version": "2.4.47+dfsg-3+deb10u1",
-      "architecture": "amd64"
-    },
-    "libnghttp2-14": {
-      "version": "1.36.0-2+deb10u1",
-      "architecture": "amd64"
-    },
-    "libpsl5": {
-      "version": "0.20.2-2",
-      "architecture": "amd64"
-    },
-    "librtmp1": {
-      "version": "2.4+20151223.gitfa8646d.1-2",
-      "architecture": "amd64"
-    },
-    "libssh2-1": {
-      "version": "1.8.0-2.1",
-      "architecture": "amd64"
-    },
-    "libcurl3-gnutls": {
-      "version": "7.64.0-4",
-      "architecture": "amd64"
-    },
-    "libglib2.0-0": {
-      "version": "2.58.3-2+deb10u2",
-      "architecture": "amd64"
-    },
     "libjansson4": {
       "version": "2.12-1",
-      "architecture": "amd64"
-    },
-    "libmm-glib0": {
-      "version": "1.10.0-1",
-      "architecture": "amd64"
-    },
-    "libndp0": {
-      "version": "1.6-1+b1",
-      "architecture": "amd64"
-    },
-    "libslang2": {
-      "version": "2.3.2-2",
-      "architecture": "amd64"
-    },
-    "libnewt0.52": {
-      "version": "0.52.20-8",
-      "architecture": "amd64"
-    },
-    "libnm0": {
-      "version": "1.14.6-2+deb10u1",
-      "architecture": "amd64"
-    },
-    "libexpat1": {
-      "version": "2.2.6-2+deb10u1",
-      "architecture": "amd64"
-    },
-    "libpolkit-gobject-1-0": {
-      "version": "0.105-25",
-      "architecture": "amd64"
-    },
-    "libpolkit-agent-1-0": {
-      "version": "0.105-25",
-      "architecture": "amd64"
-    },
-    "readline-common": {
-      "version": "7.0-5",
-      "architecture": "all"
-    },
-    "libreadline7": {
-      "version": "7.0-5",
-      "architecture": "amd64"
-    },
-    "libdbus-1-3": {
-      "version": "1.12.16-1",
-      "architecture": "amd64"
-    },
-    "libteamdctl0": {
-      "version": "1.28-1",
-      "architecture": "amd64"
-    },
-    "libnl-3-200": {
-      "version": "3.4.0-1",
-      "architecture": "amd64"
-    },
-    "libnl-genl-3-200": {
-      "version": "3.4.0-1",
-      "architecture": "amd64"
-    },
-    "libnl-route-3-200": {
-      "version": "3.4.0-1",
-      "architecture": "amd64"
-    },
-    "libpcsclite1": {
-      "version": "1.8.24-1",
-      "architecture": "amd64"
-    },
-    "wpasupplicant": {
-      "version": "2:2.7+git20190128+0c1e29f-6+deb10u1",
-      "architecture": "amd64"
-    },
-    "dbus": {
-      "version": "1.12.16-1",
-      "architecture": "amd64"
-    },
-    "udev": {
-      "version": "241-7~deb10u2",
-      "architecture": "amd64"
-    },
-    "libpam-systemd": {
-      "version": "241-7~deb10u2",
-      "architecture": "amd64"
-    },
-    "libpolkit-backend-1-0": {
-      "version": "0.105-25",
-      "architecture": "amd64"
-    },
-    "policykit-1": {
-      "version": "0.105-25",
-      "architecture": "amd64"
-    },
-    "network-manager": {
-      "version": "1.14.6-2+deb10u1",
       "architecture": "amd64"
     },
     "libmnl0": {
@@ -594,6 +438,14 @@
     },
     "libnftnl11": {
       "version": "1.1.2-2",
+      "architecture": "amd64"
+    },
+    "readline-common": {
+      "version": "7.0-5",
+      "architecture": "all"
+    },
+    "libreadline7": {
+      "version": "7.0-5",
       "architecture": "amd64"
     },
     "libxtables12": {
@@ -606,50 +458,6 @@
     },
     "nftables": {
       "version": "0.9.0-2",
-      "architecture": "amd64"
-    },
-    "pigz": {
-      "version": "2.4-1",
-      "architecture": "amd64"
-    },
-    "libpython3.7-minimal": {
-      "version": "3.7.3-2",
-      "architecture": "amd64"
-    },
-    "python3.7-minimal": {
-      "version": "3.7.3-2",
-      "architecture": "amd64"
-    },
-    "python3-minimal": {
-      "version": "3.7.3-1",
-      "architecture": "amd64"
-    },
-    "mime-support": {
-      "version": "3.62",
-      "architecture": "all"
-    },
-    "libmpdec2": {
-      "version": "2.4.2-2",
-      "architecture": "amd64"
-    },
-    "libsqlite3-0": {
-      "version": "3.27.2-3",
-      "architecture": "amd64"
-    },
-    "libpython3.7-stdlib": {
-      "version": "3.7.3-2",
-      "architecture": "amd64"
-    },
-    "python3.7": {
-      "version": "3.7.3-2",
-      "architecture": "amd64"
-    },
-    "libpython3-stdlib": {
-      "version": "3.7.3-1",
-      "architecture": "amd64"
-    },
-    "python3": {
-      "version": "3.7.3-1",
       "architecture": "amd64"
     },
     "uuid-runtime": {
@@ -796,6 +604,10 @@
       "version": "2:3.3.15-2",
       "architecture": "amd64"
     },
+    "udev": {
+      "version": "241-7~deb10u2",
+      "architecture": "amd64"
+    },
     "xxd": {
       "version": "2:8.1.0875-5",
       "architecture": "amd64"
@@ -806,6 +618,14 @@
     },
     "vim-tiny": {
       "version": "2:8.1.0875-5",
+      "architecture": "amd64"
+    },
+    "libslang2": {
+      "version": "2.3.2-2",
+      "architecture": "amd64"
+    },
+    "libnewt0.52": {
+      "version": "0.52.20-8",
       "architecture": "amd64"
     },
     "whiptail": {
@@ -820,6 +640,18 @@
       "version": "1.0.6-9.2~deb10u1",
       "architecture": "amd64"
     },
+    "libdbus-1-3": {
+      "version": "1.12.16-1",
+      "architecture": "amd64"
+    },
+    "libexpat1": {
+      "version": "2.2.6-2+deb10u1",
+      "architecture": "amd64"
+    },
+    "dbus": {
+      "version": "1.12.16-1",
+      "architecture": "amd64"
+    },
     "libmagic-mgc": {
       "version": "1:5.35-4+deb10u1",
       "architecture": "amd64"
@@ -830,10 +662,6 @@
     },
     "file": {
       "version": "1:5.35-4+deb10u1",
-      "architecture": "amd64"
-    },
-    "gettext-base": {
-      "version": "0.19.8.1-9",
       "architecture": "amd64"
     },
     "krb5-locales": {
@@ -848,6 +676,10 @@
       "version": "241-7~deb10u2",
       "architecture": "amd64"
     },
+    "libpam-systemd": {
+      "version": "241-7~deb10u2",
+      "architecture": "amd64"
+    },
     "locales": {
       "version": "2.28-10",
       "architecture": "all"
@@ -856,20 +688,12 @@
       "version": "4.16-2",
       "architecture": "all"
     },
-    "ucf": {
-      "version": "3.0038+nmu1",
+    "mime-support": {
+      "version": "3.62",
       "architecture": "all"
     },
     "xz-utils": {
       "version": "5.2.4-1",
-      "architecture": "amd64"
-    },
-    "apparmor": {
-      "version": "2.13.2-10",
-      "architecture": "amd64"
-    },
-    "busybox": {
-      "version": "1:1.30.1-4",
       "architecture": "amd64"
     },
     "openssl": {
@@ -879,26 +703,6 @@
     "ca-certificates": {
       "version": "20190110",
       "architecture": "all"
-    },
-    "wireless-regdb": {
-      "version": "2016.06.10-1",
-      "architecture": "all"
-    },
-    "iw": {
-      "version": "5.0.1-1",
-      "architecture": "amd64"
-    },
-    "crda": {
-      "version": "3.18-1",
-      "architecture": "amd64"
-    },
-    "dns-root-data": {
-      "version": "2019031302",
-      "architecture": "all"
-    },
-    "dnsmasq-base": {
-      "version": "2.80-1",
-      "architecture": "amd64"
     },
     "e2fsprogs-l10n": {
       "version": "1.44.5-1+deb10u2",
@@ -928,50 +732,6 @@
       "version": "4.92-8+deb10u3",
       "architecture": "amd64"
     },
-    "firmware-linux-free": {
-      "version": "3.4",
-      "architecture": "all"
-    },
-    "libefivar1": {
-      "version": "37-2",
-      "architecture": "amd64"
-    },
-    "libefiboot1": {
-      "version": "37-2",
-      "architecture": "amd64"
-    },
-    "libpng16-16": {
-      "version": "1.6.36-6",
-      "architecture": "amd64"
-    },
-    "libfreetype6": {
-      "version": "2.9.1-3+deb10u1",
-      "architecture": "amd64"
-    },
-    "libfuse2": {
-      "version": "2.9.9-1",
-      "architecture": "amd64"
-    },
-    "grub-common": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub2-common": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub-pc-bin": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub-pc": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub2": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
     "libgc1c2": {
       "version": "1:7.6.4-0.4",
       "architecture": "amd64"
@@ -983,26 +743,6 @@
     "guile-2.2-libs": {
       "version": "2.2.4+1-2",
       "architecture": "amd64"
-    },
-    "libklibc": {
-      "version": "2.0.6-1",
-      "architecture": "amd64"
-    },
-    "klibc-utils": {
-      "version": "2.0.6-1",
-      "architecture": "amd64"
-    },
-    "initramfs-tools-core": {
-      "version": "0.133+deb10u1",
-      "architecture": "all"
-    },
-    "linux-base": {
-      "version": "4.6",
-      "architecture": "all"
-    },
-    "initramfs-tools": {
-      "version": "0.133+deb10u1",
-      "architecture": "all"
     },
     "laptop-detect": {
       "version": "0.16",
@@ -1020,16 +760,32 @@
       "version": "1.0.5-3.1+deb10u1",
       "architecture": "amd64"
     },
-    "libglib2.0-data": {
-      "version": "2.58.3-2+deb10u2",
-      "architecture": "all"
-    },
     "libgpg-error-l10n": {
       "version": "1.35-1",
       "architecture": "all"
     },
     "libgpm2": {
       "version": "1.20.7-5",
+      "architecture": "amd64"
+    },
+    "libkeyutils1": {
+      "version": "1.6-6",
+      "architecture": "amd64"
+    },
+    "libkrb5support0": {
+      "version": "1.17-3",
+      "architecture": "amd64"
+    },
+    "libk5crypto3": {
+      "version": "1.17-3",
+      "architecture": "amd64"
+    },
+    "libkrb5-3": {
+      "version": "1.17-3",
+      "architecture": "amd64"
+    },
+    "libgssapi-krb5-2": {
+      "version": "1.17-3",
       "architecture": "amd64"
     },
     "libntlm0": {
@@ -1040,20 +796,28 @@
       "version": "1.8.0-8+b2",
       "architecture": "amd64"
     },
-    "libgudev-1.0-0": {
-      "version": "232-2",
-      "architecture": "amd64"
-    },
-    "libicu63": {
-      "version": "63.1-6",
-      "architecture": "amd64"
-    },
     "liblzo2-2": {
       "version": "2.10-0.1",
       "architecture": "amd64"
     },
     "libkyotocabinet16v5": {
       "version": "1.2.76-4.2+b1",
+      "architecture": "amd64"
+    },
+    "libsasl2-modules-db": {
+      "version": "2.1.27+dfsg-1",
+      "architecture": "amd64"
+    },
+    "libsasl2-2": {
+      "version": "2.1.27+dfsg-1",
+      "architecture": "amd64"
+    },
+    "libldap-common": {
+      "version": "2.4.47+dfsg-3+deb10u1",
+      "architecture": "all"
+    },
+    "libldap-2.4-2": {
+      "version": "2.4.47+dfsg-3+deb10u1",
       "architecture": "amd64"
     },
     "mailutils-common": {
@@ -1076,6 +840,10 @@
       "version": "2.7.16-2+deb10u1",
       "architecture": "amd64"
     },
+    "libsqlite3-0": {
+      "version": "3.27.2-3",
+      "architecture": "amd64"
+    },
     "libpython2.7-stdlib": {
       "version": "2.7.16-2+deb10u1",
       "architecture": "amd64"
@@ -1088,96 +856,24 @@
       "version": "1:3.5-3",
       "architecture": "amd64"
     },
-    "libmbim-glib4": {
-      "version": "1.18.0-1",
-      "architecture": "amd64"
-    },
-    "libmbim-proxy": {
-      "version": "1.18.0-1",
-      "architecture": "amd64"
-    },
     "libpam-cap": {
       "version": "1:2.25-2",
-      "architecture": "amd64"
-    },
-    "libpcap0.8": {
-      "version": "1.8.1-6",
-      "architecture": "amd64"
-    },
-    "libqmi-glib5": {
-      "version": "1.22.0-1.2",
-      "architecture": "amd64"
-    },
-    "libqmi-proxy": {
-      "version": "1.22.0-1.2",
       "architecture": "amd64"
     },
     "libsasl2-modules": {
       "version": "2.1.27+dfsg-1",
       "architecture": "amd64"
     },
-    "libusb-1.0-0": {
-      "version": "2:1.0.22-2",
-      "architecture": "amd64"
-    },
     "libwrap0": {
       "version": "7.6.q-28",
-      "architecture": "amd64"
-    },
-    "libxml2": {
-      "version": "2.9.4+dfsg1-7+b3",
-      "architecture": "amd64"
-    },
-    "linux-image-4.19.0-6-amd64": {
-      "version": "4.19.67-2+deb10u2",
-      "architecture": "amd64"
-    },
-    "linux-image-amd64": {
-      "version": "4.19+105+deb10u1",
       "architecture": "amd64"
     },
     "mailutils": {
       "version": "1:3.5-3",
       "architecture": "amd64"
     },
-    "modemmanager": {
-      "version": "1.10.0-1",
-      "architecture": "amd64"
-    },
-    "os-prober": {
-      "version": "1.77",
-      "architecture": "amd64"
-    },
-    "ppp": {
-      "version": "2.4.7-2+4.1",
-      "architecture": "amd64"
-    },
     "psmisc": {
       "version": "23.2-1",
-      "architecture": "amd64"
-    },
-    "publicsuffix": {
-      "version": "20190415.1030-1",
-      "architecture": "all"
-    },
-    "shared-mime-info": {
-      "version": "1.10-1",
-      "architecture": "amd64"
-    },
-    "libjim0.77": {
-      "version": "0.77+dfsg0-3",
-      "architecture": "amd64"
-    },
-    "usb-modeswitch-data": {
-      "version": "20170806-2",
-      "architecture": "all"
-    },
-    "usb-modeswitch": {
-      "version": "2.5.2+repack0-2",
-      "architecture": "amd64"
-    },
-    "xdg-user-dirs": {
-      "version": "0.17-2",
       "architecture": "amd64"
     }
   }
