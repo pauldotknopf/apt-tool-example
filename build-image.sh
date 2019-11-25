@@ -29,18 +29,45 @@ mkfs.ext4 -i 8192 -L data -U c83dfb09-d802-4de8-bf2c-b558552c4bd4 ${loop_device}
 # Mount the new partitions
 rm -rf rootfs-mounted && mkdir rootfs-mounted
 mount ${loop_device}p2 rootfs-mounted
-cp -a rootfs/* rootfs-mounted
+rsync -a images/runtime/rootfs/ rootfs-mounted/
+
+# Copy over the kernel/initramfs from the boot image.
+rsync -a images/boot/rootfs/boot/ rootfs-mounted/boot/
+
+# Build the grub.cfg and efi image.
+echo "GRUB_DEVICE=\"${loop_device}p2\"" >> images/boot/rootfs/etc/default/grub
+echo "GRUB_DEVICE_UUID=\"cf35024a-90c3-4ee7-b04a-7594f6ff48a0\"" >> images/boot/rootfs/etc/default/grub
+arch-chroot images/boot/rootfs grub-mkconfig -o grub.cfg
+arch-chroot images/boot/rootfs grub-mkimage \
+  -d /usr/lib/grub/x86_64-efi \
+  -o bootx64.efi \
+  -p /efi/boot \
+  -O x86_64-efi \
+    fat iso9660 part_gpt part_msdos normal boot linux configfile loopback chain efifwsetup efi_gop \
+    efi_uga ls search search_label search_fs_uuid search_fs_file gfxterm gfxterm_background \
+    gfxterm_menu test all_video loadenv exfat ext2 ntfs btrfs hfsplus udf
+cp images/boot/rootfs/grub.cfg rootfs-mounted/boot/grub/grub.cfg
 
 # Set the fstab
-#echo "UUID=cf35024a-90c3-4ee7-b04a-7594f6ff48a0	/         	ext4      	rw,relatime,data=ordered	0 1" >> rootfs-mounted/etc/fstab
-#echo "UUID=AB91-8E58      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2" >> rootfs-mounted/etc/fstab
+echo "UUID=cf35024a-90c3-4ee7-b04a-7594f6ff48a0	/         	ext4      	rw,relatime,data=ordered	0 1" >> rootfs-mounted/etc/fstab
 
-# Clean up
+# Finish with rootfs
+umount rootfs-mounted
+
+# Now let's prep the EFI partition
+mount ${loop_device}p1 rootfs-mounted
+mkdir -p rootfs-mounted/EFI/BOOT
+cp images/boot/rootfs/bootx64.efi rootfs-mounted/EFI/BOOT
+cat <<GRUBCFG > rootfs-mounted/EFI/BOOT/grub.cfg
+search --label "medxplatform" --set prefix
+configfile (\$prefix)/boot/grub/grub.cfg
+GRUBCFG
 umount rootfs-mounted
 rm -r rootfs-mounted
+
 losetup -d ${loop_device}
 
 #qemu-img convert -O vmdk boot.img boot.vmdk
 
 #kvm -drive format=raw,file=test.img -serial stdio -m 4G -cpu host -smp 2
-#kvm --bios /usr/share/qemu/OVMF.fd -net none -drive format=raw,file=test.img -serial stdio -m 4G -cpu host -smp 2
+#kvm --bios /usr/share/qemu/OVMF.fd -net none -drive format=raw,file=boot.img -serial stdio -m 4G -cpu host -smp 2

@@ -1,5 +1,6 @@
 {
     "packages": {
+        "network-manager": "latest"
     },
     "preseeds": [
         "../pre-seeds/common.conf",

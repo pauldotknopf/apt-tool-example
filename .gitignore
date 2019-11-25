@@ -3,3 +3,4 @@
 rootfs/
 boot.img
 boot.vmdk
+rootfs-mounted/
