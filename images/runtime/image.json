@@ -35,5 +35,5 @@
         "../pre-seeds/common.conf",
         "../pre-seeds/locales.conf",
         "../pre-seeds/timezone.conf"
-    ],
+    ]
 }

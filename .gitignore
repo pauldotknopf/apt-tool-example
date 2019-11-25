@@ -4,3 +4,5 @@ rootfs/
 boot.img
 boot.vmdk
 rootfs-mounted/
+output/
+mnt/

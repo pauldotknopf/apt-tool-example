@@ -1028,34 +1028,5 @@
       "version": "1.33+15+1533136590.3beb971-7",
       "architecture": "amd64"
     }
-  },
-  "repositories": [
-    {
-      "uri": "http://deb.debian.org/debian",
-      "distribution": "buster",
-      "components": [
-        "main",
-        "contrib",
-        "non-free"
-      ]
-    },
-    {
-      "uri": "http://deb.debian.org/debian-security/",
-      "distribution": "buster/updates",
-      "components": [
-        "main",
-        "contrib",
-        "non-free"
-      ]
-    },
-    {
-      "uri": "http://deb.debian.org/debian",
-      "distribution": "buster-updates",
-      "components": [
-        "main",
-        "contrib",
-        "non-free"
-      ]
-    }
-  ]
+  }
 }
