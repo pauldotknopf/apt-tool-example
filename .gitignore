@@ -1,3 +1,5 @@
 .debs/
 .apt/
 rootfs/
+boot.img
+boot.vmdk

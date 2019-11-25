@@ -1,6 +1,7 @@
 {
     "packages": {
-        "locales": "latest"
+        "locales": "latest",
+        "grub-efi-amd64": "latest"
     },
     "preseeds": [
         "pre-seeds/common.conf",
