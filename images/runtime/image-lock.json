@@ -664,16 +664,8 @@
       "version": "1:5.35-4+deb10u1",
       "architecture": "amd64"
     },
-    "gettext-base": {
-      "version": "0.19.8.1-9",
-      "architecture": "amd64"
-    },
     "krb5-locales": {
       "version": "1.17-3",
-      "architecture": "all"
-    },
-    "libc-l10n": {
-      "version": "2.28-10",
       "architecture": "all"
     },
     "libnss-systemd": {
@@ -684,20 +676,12 @@
       "version": "241-7~deb10u2",
       "architecture": "amd64"
     },
-    "locales": {
-      "version": "2.28-10",
-      "architecture": "all"
-    },
     "manpages": {
       "version": "4.16-2",
       "architecture": "all"
     },
     "mime-support": {
       "version": "3.62",
-      "architecture": "all"
-    },
-    "ucf": {
-      "version": "3.0038+nmu1",
       "architecture": "all"
     },
     "xz-utils": {
@@ -715,18 +699,6 @@
     "e2fsprogs-l10n": {
       "version": "1.44.5-1+deb10u2",
       "architecture": "all"
-    },
-    "libefivar1": {
-      "version": "37-2",
-      "architecture": "amd64"
-    },
-    "libefiboot1": {
-      "version": "37-2",
-      "architecture": "amd64"
-    },
-    "efibootmgr": {
-      "version": "15-1",
-      "architecture": "amd64"
     },
     "exim4-config": {
       "version": "4.92-8+deb10u3",
@@ -750,38 +722,6 @@
     },
     "exim4-daemon-light": {
       "version": "4.92-8+deb10u3",
-      "architecture": "amd64"
-    },
-    "libpng16-16": {
-      "version": "1.6.36-6",
-      "architecture": "amd64"
-    },
-    "libfreetype6": {
-      "version": "2.9.1-3+deb10u1",
-      "architecture": "amd64"
-    },
-    "libfuse2": {
-      "version": "2.9.9-1",
-      "architecture": "amd64"
-    },
-    "grub-common": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub2-common": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub-efi-amd64-bin": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub-efi-amd64": {
-      "version": "2.02+dfsg1-20",
-      "architecture": "amd64"
-    },
-    "grub-efi-amd64-signed": {
-      "version": "1+2.02+dfsg1+20",
       "architecture": "amd64"
     },
     "libgc1c2": {
@@ -924,32 +864,8 @@
       "version": "1:3.5-3",
       "architecture": "amd64"
     },
-    "mokutil": {
-      "version": "0.3.0+1538710437.fb6250f-1",
-      "architecture": "amd64"
-    },
-    "os-prober": {
-      "version": "1.77",
-      "architecture": "amd64"
-    },
     "psmisc": {
       "version": "23.2-1",
-      "architecture": "amd64"
-    },
-    "shim-unsigned": {
-      "version": "15+1533136590.3beb971-7",
-      "architecture": "amd64"
-    },
-    "shim-helpers-amd64-signed": {
-      "version": "1+15+1533136590.3beb971+7",
-      "architecture": "amd64"
-    },
-    "shim-signed-common": {
-      "version": "1.33+15+1533136590.3beb971-7",
-      "architecture": "all"
-    },
-    "shim-signed": {
-      "version": "1.33+15+1533136590.3beb971-7",
       "architecture": "amd64"
     }
   },

@@ -1,0 +1,12 @@
+{
+    "packages": {
+        "locales": "latest",
+        "grub-efi-amd64": "latest",
+        "linux-image-amd64": "latest"
+    },
+    "preseeds": [
+        "../pre-seeds/common.conf",
+        "../pre-seeds/locales.conf",
+        "../pre-seeds/timezone.conf"
+    ]
+}
