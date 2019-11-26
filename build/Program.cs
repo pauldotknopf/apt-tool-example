@@ -37,42 +37,22 @@ namespace Build
             
             Target("install-keys", () =>
             {
-                RunShell("sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys AA8E81B4331F7F50 648ACFD622F3D138");
+                RunShell("apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys AA8E81B4331F7F50 648ACFD622F3D138");
             });
             
             Target("refresh-packages", () =>
             {
-                RunShell("cd ./images/boot/ && apt-tool install");
-                RunShell("cd ./images/runtime/ && apt-tool install");
+                RunShell("cd ./image/ && apt-tool install");
             });
             
             Target("generate-rootfs", () =>
             {
-                RunShell("cd ./images/boot/ && apt-tool generate-rootfs --overwrite --run-stage2");
-                RunShell("cd ./images/runtime/ && apt-tool generate-rootfs --overwrite --run-stage2");
-            });
-            
-            Target("build-boot-artifacts", () =>
-            {
-                RunShell("rm -rf ./output/boot && mkdir -p ./output/boot");
-                RunShell("cp ./images/boot/rootfs/boot/{initrd*,vmlinuz*} ./output/boot");
-                RunShell("arch-chroot ./images/boot/rootfs grub-mkimage " +
-                         "-d /usr/lib/grub/x86_64-efi " +
-                         "-o bootx64.efi " +
-                         "-p /efi/boot " +
-                         "-O x86_64-efi " +
-                         "fat iso9660 part_gpt part_msdos normal boot linux configfile loopback chain efifwsetup efi_gop efi_uga ls search search_label search_fs_uuid search_fs_file gfxterm gfxterm_background gfxterm_menu test all_video loadenv exfat ext2 ntfs btrfs hfsplus udf");
-                RunShell("cp ./images/boot/rootfs/bootx64.efi ./output/boot");
-                using (var stream = System.IO.File.OpenWrite("./output/boot/grub-initial.cfg"))
-                using (var writer = new StreamWriter(stream))
-                {
-                    writer.WriteLine("search --label \"rootos\" --set prefix");
-                    writer.WriteLine("configfile ($prefix)/boot/grub/grub.cfg");
-                }
+                RunShell("cd ./image/ && apt-tool generate-rootfs --overwrite --run-stage2");
             });
             
             Target("create-image", () =>
             {
+                RunShell("mkdir ./output || true");
                 RunShell("rm -rf ./output/drive.img");
                 RunShell("truncate -s 11500MiB ./output/drive.img");
                 RunShell("parted -s ./output/drive.img " +
@@ -96,8 +76,8 @@ namespace Build
                 using (new Mount(device.Partition(1), "./mnt"))
                 {
                     RunShell("mkdir -p ./mnt/EFI/BOOT");
-                    RunShell("cp ./output/boot/bootx64.efi ./mnt/EFI/BOOT/bootx64.efi");
-                    RunShell("cp ./output/boot/grub-initial.cfg ./mnt/EFI/BOOT/grub.cfg");
+                    RunShell("cp ./image/rootfs/boot/bootx64.efi ./mnt/EFI/BOOT/bootx64.efi");
+                    RunShell("cp ./resources/grub-initial.cfg ./mnt/EFI/BOOT/grub.cfg");
                 }
             });
             
@@ -106,10 +86,9 @@ namespace Build
                 using (var device = new LoopDevice("./output/drive.img"))
                 using (new Mount(device.Partition(2), "./mnt"))
                 {
-                    RunShell("rsync -a ./images/runtime/rootfs/ ./mnt");
-                    RunShell("cp ./output/boot/{initrd*,vmlinuz*} ./mnt/boot");
+                    RunShell("rsync -a ./image/rootfs/ ./mnt");
                     RunShell("cp ./resources/fstab ./mnt/etc/fstab");
-                    RunShell("mkdir ./mnt/boot/grub && cp ./resources/grub.cfg ./mnt/boot/grub/grub.cfg");
+                    RunShell("mkdir ./mnt/boot/grub || true && cp ./resources/grub.cfg ./mnt/boot/grub/grub.cfg");
                 }
             });
             
@@ -137,7 +116,6 @@ namespace Build
                 "clean",
                 "install-keys",
                 "generate-rootfs",
-                "build-boot-artifacts",
                 "create-image",
                 "prepare-boot-partition",
                 "prepare-os-partition"));
