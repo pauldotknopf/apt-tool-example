@@ -25,17 +25,6 @@ namespace Build
                 Environment.Exit(1);
             }
 
-            Info($"Configuration: {options.Config}");
-            var gitVersion = GetGitVersion(ExpandPath("./"));
-            Info($"Version: {gitVersion.FullVersion}");
-            
-            var commandBuildArgs = $"--configuration {options.Config}";
-            var commandBuildArgsWithVersion = commandBuildArgs;
-            if (!string.IsNullOrEmpty(gitVersion.PreReleaseTag))
-            {
-                commandBuildArgsWithVersion += $" --version-suffix \"{gitVersion.PreReleaseTag}\"";
-            }
-            
             Target("clean", () =>
             {
                 CleanDirectory(ExpandPath("./output"));
@@ -65,7 +54,7 @@ namespace Build
             
             Target("build-boot-artifacts", () =>
             {
-                RunShell("rm -rf ./output/boot && mkdir ./output/boot");
+                RunShell("rm -rf ./output/boot && mkdir -p ./output/boot");
                 RunShell("cp ./images/boot/rootfs/boot/{initrd*,vmlinuz*} ./output/boot");
                 RunShell("arch-chroot ./images/boot/rootfs grub-mkimage " +
                          "-d /usr/lib/grub/x86_64-efi " +
