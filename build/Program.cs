@@ -144,7 +144,14 @@ namespace Build
                 RunShell("kvm --bios /usr/share/qemu/OVMF.fd -drive format=raw,file=./output/drive.img -serial stdio -m 4G -cpu host -smp 2");
             });
 
-            Target("default", DependsOn("clean", /*"generate-rootfs",*/ "build-boot-artifacts", "create-image", "prepare-boot-partition", "prepare-os-partition"));
+            Target("default", DependsOn(
+                "clean",
+                "install-keys",
+                "generate-rootfs",
+                "build-boot-artifacts",
+                "create-image",
+                "prepare-boot-partition",
+                "prepare-os-partition"));
             
             Runner.Execute(options);
         }
