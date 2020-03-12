@@ -453,11 +453,11 @@
       "architecture": "amd64"
     },
     "libsasl2-modules-db": {
-      "version": "2.1.27+dfsg-1",
+      "version": "2.1.27+dfsg-1+deb10u1",
       "architecture": "amd64"
     },
     "libsasl2-2": {
-      "version": "2.1.27+dfsg-1",
+      "version": "2.1.27+dfsg-1+deb10u1",
       "architecture": "amd64"
     },
     "libldap-common": {
@@ -1117,7 +1117,7 @@
       "architecture": "amd64"
     },
     "libsasl2-modules": {
-      "version": "2.1.27+dfsg-1",
+      "version": "2.1.27+dfsg-1+deb10u1",
       "architecture": "amd64"
     },
     "libusb-1.0-0": {
